@@ -8,8 +8,8 @@
         <link rel="stylesheet" href="font-awesome.css">
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
 
+    <body>
         <!-- home section starts  -->
         <section class="home home-container">
             <div class="content">
@@ -28,7 +28,8 @@
                 <div class="btn-container">
                     <!-- <button class="btn">Resume</button>
                     <button class="btn">Contact</button> -->
-                    <a href="file:///D:/web%20designing%20practice/some%20practicals/resume/index.html" class="button">Resume</a>
+                    <a href="file:///D:/web%20designing%20practice/some%20practicals/resume/index.html"
+                        class="button">Resume</a>
                     <a href="#contact" class="button">Contact</a>
 
                 </div>
@@ -44,11 +45,13 @@
                     <h1 class="header-heading">Nargis</h1>
                 </div>
                 <nav>
-                    <ul class="nav-list">
+                    <ul class="nav-list" id="sidemenu">
                         <li class="nav-list-item"><a class="nav-link" href="#about">About</a></li>
                         <li class="nav-list-item"><a class="nav-link" href="#project">Projects</a></li>
                         <li class="nav-list-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <i class="fas fa-times" onclick="closemenu()"></i>
                     </ul>
+                    <i class="fas fa-bars" onclick="openmenu()"></i>
                 </nav>
             </div>
         </header>
@@ -110,7 +113,9 @@
                     <div class="link">
                         <h3>Feedback-UI</h3>
                         <p class="sub-para">
-                            Discover a dynamic feedback experience. Click "Send Review" to effortlessly submit your feedback.Our commitment to improvement starts with your valuable insights. Thank you for shaping a better experience with us!**
+                            Discover a dynamic feedback experience. Click "Send Review" to effortlessly submit your
+                            feedback.Our commitment to improvement starts with your valuable insights. Thank you for
+                            shaping a better experience with us!**
                         </p>
                         <a href="https://github.com/itxnargis/feedback-ui">Source Code</a>
                         <a href="https://itxnargis.github.io/feedback-ui/">Try Demo</a>
@@ -134,9 +139,11 @@
                     <img src="images/project4.jpg" alt="">
                     <div class="link">
                         <h3>English Dictionary</h3>
-                            <div class="sub-para">
-                                Swiftly find word meanings with style. Enter a word, hit "Enter," and dive into clear definitions. Listen to pronunciations for an enhanced language experience. Your go-to resource for instant linguistic insights!
-                            </div>
+                        <div class="sub-para">
+                            Swiftly find word meanings with style. Enter a word, hit "Enter," and dive into clear
+                            definitions. Listen to pronunciations for an enhanced language experience. Your go-to
+                            resource for instant linguistic insights!
+                        </div>
                         </p>
                         <a href="https://github.com/itxnargis/english-dictionary">Source Code</a>
                         <a href="https://itxnargis.github.io/english-dictionary/">Try Demo</a>
@@ -177,6 +184,7 @@
             <div class="contact-row">
                 <h1 class="contact-heading">Get in touch.</h1>
             </div>
+            <p class="contact-para">Thank you for exploring my portfolio! If you have any question, opportunities, or just want to connect, feel free to get in touch!</p>
             <div class="contact-info">
                 <div class="input">
                     <input type="text" placeholder="Name">
@@ -204,5 +212,6 @@
         </section>
         <!-- contact section ends  -->
     </body>
+    <script src="script.js"></script>
 
 </html>

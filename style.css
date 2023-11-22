@@ -73,41 +73,69 @@ header {
   margin-bottom: 0.5rem;
   font-size: 2rem;
 }
-.nav-list {
+nav .nav-list {
   list-style: none;
   padding: 0;
   display: flex;
-  justify-content: center;
 }
 .nav-list-item {
   margin-left: 2em;
 }
 .nav-link {
+  text-align: center;
   font-weight: 700;
   color: var(--white);
   text-decoration: none;
-  padding: 0.25em;
 }
 nav .nav-link:hover,
 nav .nav-link:focus {
-  color: var(--orange);
+  color: var(--blue);
 }
 .container-nav {
   display: flex;
   justify-content: space-between;
 }
 @media (max-width: 650px) {
+  nav .nav-list {
+    flex-direction: column;
+  }
+  nav .nav-list-item {
+    margin: 0.5em 0;
+  }
   .container-nav {
     flex-direction: column;
   }
   header {
     display: block;
-    text-align: center;
+  }
+  nav .fas {
+    display: block;
+    font-size: 25px;
+  }
+  nav .nav-list {
+    background: #6888aa;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    padding: 0;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+  nav .nav-list .nav-list-item {
+    display: block;
+    margin: 25px;
+  }
+  nav .nav-list .fas {
+    position: absolute;
+    top: 1rem;
+    left: 25px;
+    cursor: pointer;
   }
   .home {
     display: none;
   }
-
 }
 /* header section ends  */
 
@@ -187,6 +215,7 @@ nav .nav-link:focus {
   margin-bottom: 0.2rem;
   font-size: 3rem;
   text-align: center;
+  margin-top: 1.2rem;
 }
 .project-para {
   margin: 0;
@@ -203,10 +232,11 @@ nav .nav-link:focus {
   background: #0e294b;
   border-radius: 1rem;
   border: 1px solid #fff;
-  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.3);
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  padding-bottom: 0.5rem;
 }
 .project .box-container .box img {
   height: auto;
@@ -231,8 +261,8 @@ nav .nav-link:focus {
 }
 .project .box-container .box .link a {
   padding: 0.5rem 1rem;
-  text-align: center;
   border-radius: 0.5rem;
+  margin-right: 1rem;
   background: transparent;
   color: #fff;
   text-decoration: none;
@@ -251,13 +281,16 @@ nav .nav-link:focus {
 .contact-row {
   display: flex;
   gap: 1.5rem;
-  margin-bottom: 1.2rem;
   align-items: center;
 }
 .contact-heading {
   font-size: 2rem;
   margin: 0;
   padding-bottom: 1rem;
+}
+.contact-para {
+  margin-top: 0;
+  font-size: 1.2rem;
 }
 .container-contact {
   width: 95%;
@@ -271,18 +304,16 @@ nav .nav-link:focus {
 .contact-icons:hover {
   color: var(--orange);
 }
-/* .contact-heading {
-  align-items: center;
-} */
 .contact-info {
-  gap: 1.5rem;
+  gap: 2rem;
   display: flex;
   margin: 0;
+  padding-bottom: 2rem;
 }
 .input input,
 .input textarea {
   font-family: "poppins", sans-serif;
-  width: 90%;
+  width: 95%;
   background: #6888aa;
   margin-bottom: 1.5rem;
   padding: 0.8rem;
@@ -318,7 +349,6 @@ nav .nav-link:focus {
 }
 .contact-icons {
   display: block;
-  gap: 1rem;
   padding: 0;
   font-size: 1.2rem;
 }
@@ -328,6 +358,5 @@ nav .nav-link:focus {
 @media (max-width: 650px) {
   .contact-info {
     display: block;
-    padding-right: 1rem;
   }
 }
