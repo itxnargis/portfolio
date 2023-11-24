@@ -61,9 +61,10 @@ body {
 header {
   display: none;
   padding: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .container {
-  width: 95%;
+  width: 90%;
   max-width: 980px;
   margin: 0 auto;
 }
@@ -89,49 +90,15 @@ nav .nav-list {
 }
 nav .nav-link:hover,
 nav .nav-link:focus {
-  color: var(--blue);
+  color: #6888aa;
 }
 .container-nav {
   display: flex;
   justify-content: space-between;
 }
 @media (max-width: 650px) {
-  nav .nav-list {
-    flex-direction: column;
-  }
-  nav .nav-list-item {
-    margin: 0.5em 0;
-  }
-  .container-nav {
-    flex-direction: column;
-  }
   header {
     display: block;
-  }
-  nav .fas {
-    display: block;
-    font-size: 25px;
-  }
-  nav .nav-list {
-    background: #6888aa;
-    position: fixed;
-    top: 0;
-    right: -300px;
-    width: 300px;
-    height: 100vh;
-    padding: 0;
-    z-index: 2;
-    transition: right 0.5s;
-  }
-  nav .nav-list .nav-list-item {
-    display: block;
-    margin: 25px;
-  }
-  nav .nav-list .fas {
-    position: absolute;
-    top: 1rem;
-    left: 25px;
-    cursor: pointer;
   }
   .home {
     display: none;
@@ -149,7 +116,7 @@ nav .nav-link:focus {
   font-weight: 400;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 .image img {
   width: 50rem;
@@ -162,7 +129,7 @@ nav .nav-link:focus {
   padding: 0.2rem 0;
 }
 .container-about {
-  width: 95%;
+  width: 90%;
   max-width: 980px;
   margin: 0 auto;
   padding-top: 2rem;
@@ -201,21 +168,20 @@ nav .nav-link:focus {
     max-width: 100%;
   }
 }
-
 /* about section ends  */
 
 /* project secrion starts  */
 .container-project {
-  width: 95%;
+  width: 90%;
   max-width: 980px;
   margin: 0 auto;
 }
 .project-heading {
   font-weight: 400;
   margin-bottom: 0.2rem;
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
-  margin-top: 1.2rem;
+  margin-top: 0.5rem;
 }
 .project-para {
   margin: 0;
@@ -229,10 +195,10 @@ nav .nav-link:focus {
   gap: 1.5rem;
 }
 .project .box-container .box {
+  padding: 1rem;
   background: #0e294b;
-  border-radius: 1rem;
-  border: 1px solid #fff;
-  box-shadow: rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.5);
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -240,6 +206,7 @@ nav .nav-link:focus {
 }
 .project .box-container .box img {
   height: auto;
+  border-radius: 0.3rem;
   width: 100%;
   max-width: 100%;
   object-fit: contain;
@@ -262,9 +229,9 @@ nav .nav-link:focus {
 .project .box-container .box .link a {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  margin-right: 1rem;
   background: transparent;
   color: #fff;
+  margin-right: 0.2rem;
   text-decoration: none;
   border: 1px solid #fff;
 }
@@ -273,10 +240,17 @@ nav .nav-link:focus {
   color: #fff;
 }
 .project .box-container .box .link h3 {
-  text-decoration: underline;
+  /*  text-decoration: underline; */
   margin: 0;
   font-size: x-large;
 }
+
+@media (max-width: 650px) {
+  .project .box-container .box .link a {
+    margin-right: 1rem;
+  }
+}
+
 /* contact section starts  */
 .contact-row {
   display: flex;
@@ -293,7 +267,7 @@ nav .nav-link:focus {
   font-size: 1.2rem;
 }
 .container-contact {
-  width: 95%;
+  width: 90%;
   max-width: 980px;
   margin: 0 auto;
   padding-top: 2rem;
@@ -308,15 +282,15 @@ nav .nav-link:focus {
   gap: 2rem;
   display: flex;
   margin: 0;
-  padding-bottom: 2rem;
+  padding-bottom: 5rem;
 }
-.input input,
-.input textarea {
+.input input, .input textarea {
   font-family: "poppins", sans-serif;
   width: 95%;
   background: #6888aa;
   margin-bottom: 1.5rem;
   padding: 0.8rem;
+  padding-right: 0;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
