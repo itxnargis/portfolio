@@ -4,6 +4,10 @@
   --orange: orange;
   --box-shadow: 0 0.5rem 1.5rem rgba(73, 48, 48, 0.1);
 }
+
+html{
+  scroll-behavior: smooth;
+}
 body {
   font-family: "poppins", sans-serif;
   /* font-size: 1.125rem; */
@@ -38,6 +42,28 @@ body {
   gap: 1.2rem;
   padding: 0;
 }
+.social-icons a {
+  text-decoration: none;
+}
+
+.social-icons a i{
+  font-size: 1rem;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: white;
+  color: var(--blue);
+  transition: transform 0.5s ease ;
+}
+.social-icons a i:hover {
+  color: #ff3f80;
+  -webkit-transform: scale(1.1) translateY(-5px) rotate(360deg);
+  transform: scale(1.1) translateY(-5px) rotate(360deg);
+}
+
 .btn-container {
   display: flex;
   justify-content: center;
@@ -79,7 +105,7 @@ nav .nav-list {
   display: flex;
 }
 .nav-list-item {
-  margin-left: 2em;
+  margin-left: 1.7em;
 }
 .nav-link {
   text-align: center;
@@ -140,34 +166,6 @@ nav .nav-link:focus {
   gap: 1.2rem;
   padding: 0.1rem 0;
 }
-.icons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--white);
-  gap: 1rem;
-  padding: 0;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-.fas.fa-envelope {
-  color: var(--white);
-}
-.fas.fa-envelope:hover {
-  color: var(--orange);
-}
-.fa-brands.fa-twitter {
-  color: var(--white);
-}
-.fa-brands.fa-twitter:hover {
-  color: var(--orange);
-}
-.fa-brands.fa-github {
-  color: var(--white);
-}
-.fa-brands.fa-github:hover {
-  color: var(--orange);
-}
 @media (max-width: 650px) {
   .row {
     display: block;
@@ -203,7 +201,7 @@ nav .nav-link:focus {
 .project .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  gap: 2rem;
+  gap: 1.5rem;
 }
 .project .box-container .box {
   background: #0e294b;
@@ -216,7 +214,7 @@ nav .nav-link:focus {
 }
 .project .box-container .box img {
   height: auto;
-  border-radius: 0.3rem;
+  /* border-radius: 0.3rem; */
   width: 100%;
   max-width: 100%;
   object-fit: contain;
@@ -226,38 +224,46 @@ nav .nav-link:focus {
   color: #fff;
   font-weight: 400;
   margin-top: 0.6rem;
-  font-size: 1.1rem;
+  /* font-size: 1.1rem; */
   letter-spacing: 1px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 .project .box-container .box .link {
   background: #0e294b;
   border-radius: 0.8rem;
   margin-bottom: 0;
-  padding: 1rem 0.5rem;
+  padding: .75rem 0.35rem;
 }
 .project .box-container .box .link a {
   padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  background: transparent;
+  margin-bottom: 1rem;
+  border-radius: 0.3rem;
+  background: #247ba0;
   color: #fff;
   margin-right: 0.2rem;
+  text-align: center;
   text-decoration: none;
+  /* letter-spacing: 1px; */
   border: 1px solid #fff;
+
+  font-size: .77rem;
+  letter-spacing: .1em;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 .project .box-container .box .link a:hover {
-  background: #0e294b;
-  color: #fff;
+  border: 1px solid white;
+  outline: none;
+  box-shadow: 0 0 5px rgba(23, 80, 141, 0.5);
 }
 .project .box-container .box .link h3 {
   /*  text-decoration: underline; */
   margin: 0;
   font-size: x-large;
 }
-
 @media (max-width: 650px) {
   .project .box-container .box .link a {
-    margin-right: 1rem;
+    /* margin-right: 1rem; */
   }
 }
 
@@ -283,15 +289,7 @@ nav .nav-link:focus {
   margin: 0 auto;
   padding-top: 2rem;
 }
-.contact-icons {
-  font-size: 2rem;
-}
-.contact-icons:hover {
-  color: var(--orange);
-}
 .contact-info {
-  /* gap: 2rem; */
-  display: flex;
   margin: 0;
   padding-bottom: 3rem;
 }
@@ -311,35 +309,16 @@ nav .nav-link:focus {
 .input textarea::placeholder {
   color: var(--white);
 }
-.input input:focus,
-.input textarea:focus {
-  border: 1px solid orange;
+.input input:hover,
+.input textarea:hover {
+  border: 2px solid white;
   outline: none;
-  box-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
-}
-.contact-icons-container {
-  margin: 0;
-  display: block;
-}
-.contact-icons a {
-  color: var(--white);
-  text-decoration: none;
-}
-.contact-icons a:hover {
-  color: var(--orange);
+  /* box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); */
 }
 .info {
   font-size: 0.8rem;
   margin-bottom: 0.8rem;
   padding-left: 0.5rem;
-}
-.contact-icons {
-  display: block;
-  padding: 0;
-  font-size: 1.2rem;
-}
-.contact-icons i {
-  margin-right: 1rem;
 }
 @media (max-width: 650px) {
   .contact-info {
